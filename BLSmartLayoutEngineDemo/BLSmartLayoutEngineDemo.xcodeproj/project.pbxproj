@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DAFC521E1CDC7D4500D2DC80 /* libBLSmartLayoutEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFC521D1CDC7CEE00D2DC80 /* libBLSmartLayoutEngine.a */; };
+		5414F9841F06490200923AE3 /* libBLSmartLayoutEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5414F9821F0648E500923AE3 /* libBLSmartLayoutEngine.a */; };
 		DAFC52391CDC7E7800D2DC80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFC52231CDC7E7800D2DC80 /* AppDelegate.m */; };
 		DAFC523A1CDC7E7800D2DC80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAFC52241CDC7E7800D2DC80 /* Assets.xcassets */; };
 		DAFC52431CDC7E7800D2DC80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFC52361CDC7E7800D2DC80 /* main.m */; };
@@ -15,6 +15,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5414F9811F0648E500923AE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5414F97D1F0648E500923AE3 /* BLSmartLayoutEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DAFC51FC1CDC7C0D00D2DC80;
+			remoteInfo = BLSmartLayoutEngine;
+		};
 		DAFC51971CDB48FF00D2DC80 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DAFC51751CDB48FF00D2DC80 /* Project object */;
@@ -29,20 +36,14 @@
 			remoteGlobalIDString = DAFC517C1CDB48FF00D2DC80;
 			remoteInfo = BLSmartLayoutDemo;
 		};
-		DAFC521C1CDC7CEE00D2DC80 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DAFC52181CDC7CEE00D2DC80 /* BLSmartLayoutEngine.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DAFC51FC1CDC7C0D00D2DC80;
-			remoteInfo = BLSmartLayoutEngine;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5414F97D1F0648E500923AE3 /* BLSmartLayoutEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BLSmartLayoutEngine.xcodeproj; path = ../BLSmartLayoutEngine.xcodeproj; sourceTree = "<group>"; };
+		5414F9831F0648F500923AE3 /* BLSmartLayoutEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLSmartLayoutEngine.h; path = ../../BLSmartLayoutEngine/BLSmartLayoutEngine.h; sourceTree = "<group>"; };
 		DAFC517D1CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLSmartLayoutEngineDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFC51961CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLSmartLayoutEngineDemo.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFC51A11CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLSmartLayoutEngineDemo.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAFC52181CDC7CEE00D2DC80 /* BLSmartLayoutEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BLSmartLayoutEngine.xcodeproj; path = ../BLSmartLayoutEngine/BLSmartLayoutEngine.xcodeproj; sourceTree = "<group>"; };
 		DAFC52221CDC7E7800D2DC80 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DAFC52231CDC7E7800D2DC80 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DAFC52241CDC7E7800D2DC80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,7 +51,6 @@
 		DAFC52361CDC7E7800D2DC80 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DAFC52371CDC7E7800D2DC80 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DAFC52381CDC7E7800D2DC80 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		DAFC52491CDC7FB300D2DC80 /* BLSmartLayoutEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLSmartLayoutEngine.h; path = ../../BLSmartLayoutEngine/BLSmartLayoutEngine/BLSmartLayoutEngine.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAFC521E1CDC7D4500D2DC80 /* libBLSmartLayoutEngine.a in Frameworks */,
+				5414F9841F06490200923AE3 /* libBLSmartLayoutEngine.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +79,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5414F97E1F0648E500923AE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5414F9821F0648E500923AE3 /* libBLSmartLayoutEngine.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		DAFC51741CDB48FF00D2DC80 = {
 			isa = PBXGroup;
 			children = (
-				DAFC52181CDC7CEE00D2DC80 /* BLSmartLayoutEngine.xcodeproj */,
+				5414F97D1F0648E500923AE3 /* BLSmartLayoutEngine.xcodeproj */,
 				DAFC52211CDC7E7800D2DC80 /* BLSmartLayoutEngineDemo */,
 				DAFC517E1CDB48FF00D2DC80 /* Products */,
 			);
@@ -94,14 +102,6 @@
 				DAFC517D1CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo.app */,
 				DAFC51961CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo.xctest */,
 				DAFC51A11CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		DAFC52191CDC7CEE00D2DC80 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DAFC521D1CDC7CEE00D2DC80 /* libBLSmartLayoutEngine.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,7 +124,7 @@
 		DAFC52471CDC7F7900D2DC80 /* Depends */ = {
 			isa = PBXGroup;
 			children = (
-				DAFC52491CDC7FB300D2DC80 /* BLSmartLayoutEngine.h */,
+				5414F9831F0648F500923AE3 /* BLSmartLayoutEngine.h */,
 			);
 			name = Depends;
 			sourceTree = "<group>";
@@ -221,8 +221,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = DAFC52191CDC7CEE00D2DC80 /* Products */;
-					ProjectRef = DAFC52181CDC7CEE00D2DC80 /* BLSmartLayoutEngine.xcodeproj */;
+					ProductGroup = 5414F97E1F0648E500923AE3 /* Products */;
+					ProjectRef = 5414F97D1F0648E500923AE3 /* BLSmartLayoutEngine.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -235,11 +235,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		DAFC521D1CDC7CEE00D2DC80 /* libBLSmartLayoutEngine.a */ = {
+		5414F9821F0648E500923AE3 /* libBLSmartLayoutEngine.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libBLSmartLayoutEngine.a;
-			remoteRef = DAFC521C1CDC7CEE00D2DC80 /* PBXContainerItemProxy */;
+			remoteRef = 5414F9811F0648E500923AE3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
