@@ -26,8 +26,8 @@ UIView* containterView = [[UIView alloc] init];
 containterView.bls_layoutType = BLSmartLayoutTypeHBox;
 containterView.bls_spacing = 20.0;
 for ( int j = 0; j < 4; j++ )  {
-UIView* subView =[[UIView alloc] init];
-[containterView addSubview:subView];
+    UIView* subView =[[UIView alloc] init];
+    [containterView addSubview:subView];
 }
 ```
 
@@ -38,8 +38,8 @@ UIView* containterView = [[UIView alloc] init];
 containterView.bls_layoutType = BLSmartLayoutTypeVBox;
 containterView.bls_spacing = 20.0;
 for ( int j = 0; j < 4; j++ ) {
-UIView* subView =[[UIView alloc] init];
-[containterView addSubview:subView];
+    UIView* subView =[[UIView alloc] init];
+    [containterView addSubview:subView];
 }
 ```
 
@@ -105,17 +105,13 @@ Make custom layout style
 
 ```objc
 @interface CustomSmartLayout : BLSmartLayout 
-
 + (void)bls_layoutViews:(UIView*)superView;
-
 @end
 
 @implementation CustomSmartLayout
-
 + (void)bls_layoutViews:(UIView*)superView {
-//TODO:layout subviews
+    //TODO:layout subviews
 }
-
 @end
 ```
 
@@ -132,4 +128,5 @@ UIView* view = [[UIView alloc] init];
 view.bls_layoutType = BLSmartLayoutTypeAnchor;
 ```
 
-Look through the demo,you will find the way quickly  
+Look through the demo,you will find the way quickly.
+Feel free to use it. 
