@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DAFC521E1CDC7D4500D2DC80 /* libBLSmartLayoutEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAFC521D1CDC7CEE00D2DC80 /* libBLSmartLayoutEngine.a */; };
+		DAFC52391CDC7E7800D2DC80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFC52231CDC7E7800D2DC80 /* AppDelegate.m */; };
+		DAFC523A1CDC7E7800D2DC80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAFC52241CDC7E7800D2DC80 /* Assets.xcassets */; };
+		DAFC52431CDC7E7800D2DC80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFC52361CDC7E7800D2DC80 /* main.m */; };
+		DAFC52441CDC7E7800D2DC80 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFC52381CDC7E7800D2DC80 /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAFC51971CDB48FF00D2DC80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAFC51751CDB48FF00D2DC80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAFC517C1CDB48FF00D2DC80;
+			remoteInfo = BLSmartLayoutDemo;
+		};
+		DAFC51A21CDB48FF00D2DC80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAFC51751CDB48FF00D2DC80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAFC517C1CDB48FF00D2DC80;
+			remoteInfo = BLSmartLayoutDemo;
+		};
+		DAFC521C1CDC7CEE00D2DC80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAFC52181CDC7CEE00D2DC80 /* BLSmartLayoutEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DAFC51FC1CDC7C0D00D2DC80;
+			remoteInfo = BLSmartLayoutEngine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DAFC517D1CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLSmartLayoutEngineDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAFC51961CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLSmartLayoutEngineDemo.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAFC51A11CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLSmartLayoutEngineDemo.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAFC52181CDC7CEE00D2DC80 /* BLSmartLayoutEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BLSmartLayoutEngine.xcodeproj; path = ../BLSmartLayoutEngine/BLSmartLayoutEngine.xcodeproj; sourceTree = "<group>"; };
+		DAFC52221CDC7E7800D2DC80 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DAFC52231CDC7E7800D2DC80 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DAFC52241CDC7E7800D2DC80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAFC52351CDC7E7800D2DC80 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAFC52361CDC7E7800D2DC80 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DAFC52371CDC7E7800D2DC80 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DAFC52381CDC7E7800D2DC80 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DAFC52491CDC7FB300D2DC80 /* BLSmartLayoutEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLSmartLayoutEngine.h; path = ../../BLSmartLayoutEngine/BLSmartLayoutEngine/BLSmartLayoutEngine.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAFC517A1CDB48FF00D2DC80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAFC521E1CDC7D4500D2DC80 /* libBLSmartLayoutEngine.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAFC51931CDB48FF00D2DC80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAFC519E1CDB48FF00D2DC80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DAFC51741CDB48FF00D2DC80 = {
+			isa = PBXGroup;
+			children = (
+				DAFC52181CDC7CEE00D2DC80 /* BLSmartLayoutEngine.xcodeproj */,
+				DAFC52211CDC7E7800D2DC80 /* BLSmartLayoutEngineDemo */,
+				DAFC517E1CDB48FF00D2DC80 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DAFC517E1CDB48FF00D2DC80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAFC517D1CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo.app */,
+				DAFC51961CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo.xctest */,
+				DAFC51A11CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAFC52191CDC7CEE00D2DC80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAFC521D1CDC7CEE00D2DC80 /* libBLSmartLayoutEngine.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAFC52211CDC7E7800D2DC80 /* BLSmartLayoutEngineDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DAFC52471CDC7F7900D2DC80 /* Depends */,
+				DAFC52221CDC7E7800D2DC80 /* AppDelegate.h */,
+				DAFC52231CDC7E7800D2DC80 /* AppDelegate.m */,
+				DAFC52241CDC7E7800D2DC80 /* Assets.xcassets */,
+				DAFC52351CDC7E7800D2DC80 /* Info.plist */,
+				DAFC52361CDC7E7800D2DC80 /* main.m */,
+				DAFC52371CDC7E7800D2DC80 /* ViewController.h */,
+				DAFC52381CDC7E7800D2DC80 /* ViewController.m */,
+			);
+			path = BLSmartLayoutEngineDemo;
+			sourceTree = "<group>";
+		};
+		DAFC52471CDC7F7900D2DC80 /* Depends */ = {
+			isa = PBXGroup;
+			children = (
+				DAFC52491CDC7FB300D2DC80 /* BLSmartLayoutEngine.h */,
+			);
+			name = Depends;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAFC517C1CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAFC51AA1CDB48FF00D2DC80 /* Build configuration list for PBXNativeTarget "BLSmartLayoutEngineDemo" */;
+			buildPhases = (
+				DAFC51791CDB48FF00D2DC80 /* Sources */,
+				DAFC517A1CDB48FF00D2DC80 /* Frameworks */,
+				DAFC517B1CDB48FF00D2DC80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BLSmartLayoutEngineDemo;
+			productName = BLSmartLayoutDemo;
+			productReference = DAFC517D1CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DAFC51951CDB48FF00D2DC80 /* BLSmartLayoutEngineDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAFC51AD1CDB48FF00D2DC80 /* Build configuration list for PBXNativeTarget "BLSmartLayoutEngineDemoTests" */;
+			buildPhases = (
+				DAFC51921CDB48FF00D2DC80 /* Sources */,
+				DAFC51931CDB48FF00D2DC80 /* Frameworks */,
+				DAFC51941CDB48FF00D2DC80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAFC51981CDB48FF00D2DC80 /* PBXTargetDependency */,
+			);
+			name = BLSmartLayoutEngineDemoTests;
+			productName = BLSmartLayoutDemoTests;
+			productReference = DAFC51961CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DAFC51A01CDB48FF00D2DC80 /* BLSmartLayoutEngineDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAFC51B01CDB48FF00D2DC80 /* Build configuration list for PBXNativeTarget "BLSmartLayoutEngineDemoUITests" */;
+			buildPhases = (
+				DAFC519D1CDB48FF00D2DC80 /* Sources */,
+				DAFC519E1CDB48FF00D2DC80 /* Frameworks */,
+				DAFC519F1CDB48FF00D2DC80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAFC51A31CDB48FF00D2DC80 /* PBXTargetDependency */,
+			);
+			name = BLSmartLayoutEngineDemoUITests;
+			productName = BLSmartLayoutDemoUITests;
+			productReference = DAFC51A11CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAFC51751CDB48FF00D2DC80 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = 9game;
+				TargetAttributes = {
+					DAFC517C1CDB48FF00D2DC80 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = B58Q7JY66V;
+					};
+					DAFC51951CDB48FF00D2DC80 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = DAFC517C1CDB48FF00D2DC80;
+					};
+					DAFC51A01CDB48FF00D2DC80 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = DAFC517C1CDB48FF00D2DC80;
+					};
+				};
+			};
+			buildConfigurationList = DAFC51781CDB48FF00D2DC80 /* Build configuration list for PBXProject "BLSmartLayoutEngineDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAFC51741CDB48FF00D2DC80;
+			productRefGroup = DAFC517E1CDB48FF00D2DC80 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DAFC52191CDC7CEE00D2DC80 /* Products */;
+					ProjectRef = DAFC52181CDC7CEE00D2DC80 /* BLSmartLayoutEngine.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				DAFC517C1CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo */,
+				DAFC51951CDB48FF00D2DC80 /* BLSmartLayoutEngineDemoTests */,
+				DAFC51A01CDB48FF00D2DC80 /* BLSmartLayoutEngineDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DAFC521D1CDC7CEE00D2DC80 /* libBLSmartLayoutEngine.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libBLSmartLayoutEngine.a;
+			remoteRef = DAFC521C1CDC7CEE00D2DC80 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAFC517B1CDB48FF00D2DC80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAFC523A1CDC7E7800D2DC80 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAFC51941CDB48FF00D2DC80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAFC519F1CDB48FF00D2DC80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAFC51791CDB48FF00D2DC80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAFC52441CDC7E7800D2DC80 /* ViewController.m in Sources */,
+				DAFC52431CDC7E7800D2DC80 /* main.m in Sources */,
+				DAFC52391CDC7E7800D2DC80 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAFC51921CDB48FF00D2DC80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAFC519D1CDB48FF00D2DC80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAFC51981CDB48FF00D2DC80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAFC517C1CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo */;
+			targetProxy = DAFC51971CDB48FF00D2DC80 /* PBXContainerItemProxy */;
+		};
+		DAFC51A31CDB48FF00D2DC80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAFC517C1CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo */;
+			targetProxy = DAFC51A21CDB48FF00D2DC80 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		DAFC51A81CDB48FF00D2DC80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAFC51A91CDB48FF00D2DC80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAFC51AB1CDB48FF00D2DC80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = BLSmartLayoutEngineDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arlin.BLSmartLayoutEngineDemo;
+				PRODUCT_NAME = BLSmartLayoutEngineDemo;
+			};
+			name = Debug;
+		};
+		DAFC51AC1CDB48FF00D2DC80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = BLSmartLayoutEngineDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arlin.BLSmartLayoutEngineDemo;
+				PRODUCT_NAME = BLSmartLayoutEngineDemo;
+			};
+			name = Release;
+		};
+		DAFC51AE1CDB48FF00D2DC80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BLSmartLayoutDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arlin.BLSmartLayoutDemoTests;
+				PRODUCT_NAME = BLSmartLayoutEngineDemo;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLSmartLayoutEngineDemo.app/BLSmartLayoutEngineDemo";
+			};
+			name = Debug;
+		};
+		DAFC51AF1CDB48FF00D2DC80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BLSmartLayoutDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arlin.BLSmartLayoutDemoTests;
+				PRODUCT_NAME = BLSmartLayoutEngineDemo;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLSmartLayoutEngineDemo.app/BLSmartLayoutEngineDemo";
+			};
+			name = Release;
+		};
+		DAFC51B11CDB48FF00D2DC80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BLSmartLayoutDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arlin.BLSmartLayoutDemoTests;
+				PRODUCT_NAME = BLSmartLayoutEngineDemo;
+				TEST_TARGET_NAME = BLSmartLayoutEngineDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		DAFC51B21CDB48FF00D2DC80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BLSmartLayoutDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arlin.BLSmartLayoutDemoTests;
+				PRODUCT_NAME = BLSmartLayoutEngineDemo;
+				TEST_TARGET_NAME = BLSmartLayoutEngineDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAFC51781CDB48FF00D2DC80 /* Build configuration list for PBXProject "BLSmartLayoutEngineDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAFC51A81CDB48FF00D2DC80 /* Debug */,
+				DAFC51A91CDB48FF00D2DC80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAFC51AA1CDB48FF00D2DC80 /* Build configuration list for PBXNativeTarget "BLSmartLayoutEngineDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAFC51AB1CDB48FF00D2DC80 /* Debug */,
+				DAFC51AC1CDB48FF00D2DC80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAFC51AD1CDB48FF00D2DC80 /* Build configuration list for PBXNativeTarget "BLSmartLayoutEngineDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAFC51AE1CDB48FF00D2DC80 /* Debug */,
+				DAFC51AF1CDB48FF00D2DC80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAFC51B01CDB48FF00D2DC80 /* Build configuration list for PBXNativeTarget "BLSmartLayoutEngineDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAFC51B11CDB48FF00D2DC80 /* Debug */,
+				DAFC51B21CDB48FF00D2DC80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAFC51751CDB48FF00D2DC80 /* Project object */;
+}
