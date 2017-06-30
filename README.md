@@ -1,23 +1,124 @@
-# BLSmartLayoutEngine
+##BLSmartLayoutEngine
 
-# [Description]
+##About
+BLSmartLayoutEngine is a lightweight layout engine for iOS,here are the reasons why we make it:
 
-BLSmartLayoutEngine is a lightweight layout engine for iOS,here are the reasons why we built it:
+1:Some layout engines people using now,such as autoresizing, auto-layout,and Masonry,it is complicated. 
+2:BLSmartLayoutEngine is easy to learn and use, unlike auto-layout,it does not depend on any advanced system version,  so you have no need to consider the system versions.
 
-1:some layout engines people using now,such as autoresizing, auto-layout,and Masonry,it is complicated. 
+##CocoaPods
 
-2: BLSmartLayoutEngine is easy to learn and use, unlike auto-layout,it does not depend on any advanced system version,  so you have no need to consider the system versions.
-
-# [Version]
-
-v1.0.1
+Coming soon...
 
 
-# [Author]
+##Usage
 
-Arlin(420776870@qq.com)
+* Layout all subviews with same width horizontal(HBox) , space between subviews is 20.0 px
+```objc
+UIView* containterView = [[UIView alloc] init];
+containterView.bls_layoutType = BLSmartLayoutTypeHBox;
+containterView.bls_spacing = 20.0;
+for ( int j = 0; j < 4; j++ )  {
+UIView* subView =[[UIView alloc] init];
+[containterView addSubview:subView];
+}
+```
 
+* Layout all subviews with same height vertical(VBox), space between subviews is 20.0 px
+```objc
+UIView* containterView = [[UIView alloc] init];
+containterView.bls_layoutType = BLSmartLayoutTypeVBox;
+containterView.bls_spacing = 20.0;
+for ( int j = 0; j < 4; j++ ) {
+UIView* subView =[[UIView alloc] init];
+[containterView addSubview:subView];
+}
+```
 
-# [Usage]
+* Layout subviews in Anchor style
+```objc
+UIView* view = [[UIView alloc] init]; 
+view.bls_layoutType = BLSmartLayoutTypeAnchor;
+BLSmartLayoutAnchorInfo* anchorInfo = nil;
 
-look through the demo,you will find the way quickly  
+//left-top
+UILabel* label = [[UILabel alloc] initWithFrame:CGRectZero];
+label.text = @"lt";
+label.backgroundColor = [UIColor redColor];
+anchorInfo = [[BLSmartLayoutAnchorInfo alloc] init];
+anchorInfo.bls_leftAnchor = UIEdgeInsetsMake(0.0, 2.0, 0.0, 0.0);
+anchorInfo.bls_topAnchor = UIEdgeInsetsMake(2.0, 0.0, 0.0, 0.0);
+anchorInfo.bls_rightAnchor = UIEdgeInsetsMake(0.0, 20.0, 0.0, 0.0);
+anchorInfo.bls_bottomAnchor = UIEdgeInsetsMake(22.0, 0.0, 0.0, 0.0);
+label.bls_anchorInfo = anchorInfo;
+[view addSubview:label];
+
+//right-top
+label = [[UILabel alloc] initWithFrame:CGRectZero];
+label.text = @"rt";
+label.backgroundColor = [UIColor redColor];
+anchorInfo = [[BLSmartLayoutAnchorInfo alloc] init];
+anchorInfo.bls_leftAnchor = UIEdgeInsetsMake(0.0, 0.0, 0.0, 20.0);
+anchorInfo.bls_topAnchor = UIEdgeInsetsMake(2.0, 0.0, 0.0, 0.0);
+anchorInfo.bls_rightAnchor = UIEdgeInsetsMake(0.0, 0.0, 0.0, 2.0);
+anchorInfo.bls_bottomAnchor = UIEdgeInsetsMake(22.0, 0.0, 0.0, 0.0);
+label.bls_anchorInfo = anchorInfo;
+[view addSubview:label];
+
+//left-bottom 
+label = [[UILabel alloc] initWithFrame:CGRectZero];
+label.text = @"lb";
+label.backgroundColor = [UIColor redColor];
+anchorInfo = [[BLSmartLayoutAnchorInfo alloc] init];
+anchorInfo.bls_leftAnchor = UIEdgeInsetsMake(0.0, 2.0, 0.0, 0.0);
+anchorInfo.bls_topAnchor = UIEdgeInsetsMake(0.0, 0.0, 22.0, 0.0);
+anchorInfo.bls_rightAnchor = UIEdgeInsetsMake(0.0, 20.0, 0.0, 0.0);
+anchorInfo.bls_bottomAnchor = UIEdgeInsetsMake(0.0, 0.0, 2.0, 0.0);
+label.bls_anchorInfo = anchorInfo;
+[view addSubview:label];
+
+//right-bottom
+label = [[UILabel alloc] initWithFrame:CGRectZero];
+label.text = @"rb";
+label.backgroundColor = [UIColor redColor];
+anchorInfo = [[BLSmartLayoutAnchorInfo alloc] init];
+anchorInfo.bls_leftAnchor = UIEdgeInsetsMake(0.0, 0.0, 0.0, 20.0);
+anchorInfo.bls_topAnchor = UIEdgeInsetsMake(0.0, 0.0, 22.0, 0.0);
+anchorInfo.bls_rightAnchor = UIEdgeInsetsMake(0.0, 0.0, 0.0, 2.0);
+anchorInfo.bls_bottomAnchor = UIEdgeInsetsMake(0.0, 0.0, 2.0, 0.0);
+label.bls_anchorInfo = anchorInfo;
+[view addSubview:label];
+```
+
+* Make custom layout style
+```objc
+1): Inherit a subclass from BLSmartLayout
+
+//interface
+@interface CustomSmartLayout : BLSmartLayout 
+
++ (void)bls_layoutViews:(UIView*)superView;
+
+@end
+
+//implementation
+@implementation CustomSmartLayout
+
++ (void)bls_layoutViews:(UIView*)superView {
+//TODO:layout subviews
+}
+
+@end
+
+2): Regist layout subclass
+
+[UIView bls_registLayoutClass:[CustomSmartLayout class] layoutType:BLSmartLayoutTypeUser + 10];
+
+3): using new layout style
+
+UIView* view = [[UIView alloc] init];
+view.bls_layoutType = BLSmartLayoutTypeAnchor;
+```
+
+Look through the demo,you will find the way quickly  
+
