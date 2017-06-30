@@ -7,7 +7,9 @@
 `BLSmartLayoutEngine` is a lightweight layout engine for iOS,here are the reasons why we make it:
 
 1: Some layout engines people using now,such as autoresizing, auto-layout,and Masonry,it is complicated. 
+
 2: BLSmartLayoutEngine is easy to learn and use, unlike auto-layout,it does not depend on any advanced system version,  so you have no need to consider the system versions.
+
 3: Somewhere we may want to layout UI dynamically.
 
 ## CocoaPods
@@ -18,6 +20,7 @@ Coming soon...
 ## Usage
 
 Layout all subviews with same width horizontal(HBox) , space between subviews is 20.0 px
+
 ```objc
 UIView* containterView = [[UIView alloc] init];
 containterView.bls_layoutType = BLSmartLayoutTypeHBox;
@@ -29,6 +32,7 @@ UIView* subView =[[UIView alloc] init];
 ```
 
 Layout all subviews with same height vertical(VBox), space between subviews is 20.0 px
+
 ```objc
 UIView* containterView = [[UIView alloc] init];
 containterView.bls_layoutType = BLSmartLayoutTypeVBox;
@@ -40,6 +44,7 @@ UIView* subView =[[UIView alloc] init];
 ```
 
 Layout subviews in Anchor style
+
 ```objc
 UIView* view = [[UIView alloc] init]; 
 view.bls_layoutType = BLSmartLayoutTypeAnchor;
