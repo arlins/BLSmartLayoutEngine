@@ -1,19 +1,22 @@
-##BLSmartLayoutEngine
+## BLSmartLayoutEngine
 
-##About
+BLSmartLayoutEngine is a lightweight layout engine for iOS
+
+## About
+
 BLSmartLayoutEngine is a lightweight layout engine for iOS,here are the reasons why we make it:
 
 1:Some layout engines people using now,such as autoresizing, auto-layout,and Masonry,it is complicated. 
 2:BLSmartLayoutEngine is easy to learn and use, unlike auto-layout,it does not depend on any advanced system version,  so you have no need to consider the system versions.
 
-##CocoaPods
+## CocoaPods
 
 Coming soon...
 
 
-##Usage
+## Usage
 
-* Layout all subviews with same width horizontal(HBox) , space between subviews is 20.0 px
+Layout all subviews with same width horizontal(HBox) , space between subviews is 20.0 px
 ```objc
 UIView* containterView = [[UIView alloc] init];
 containterView.bls_layoutType = BLSmartLayoutTypeHBox;
@@ -24,7 +27,7 @@ UIView* subView =[[UIView alloc] init];
 }
 ```
 
-* Layout all subviews with same height vertical(VBox), space between subviews is 20.0 px
+Layout all subviews with same height vertical(VBox), space between subviews is 20.0 px
 ```objc
 UIView* containterView = [[UIView alloc] init];
 containterView.bls_layoutType = BLSmartLayoutTypeVBox;
@@ -35,7 +38,7 @@ UIView* subView =[[UIView alloc] init];
 }
 ```
 
-* Layout subviews in Anchor style
+Layout subviews in Anchor style
 ```objc
 UIView* view = [[UIView alloc] init]; 
 view.bls_layoutType = BLSmartLayoutTypeAnchor;
@@ -90,10 +93,11 @@ label.bls_anchorInfo = anchorInfo;
 [view addSubview:label];
 ```
 
-* Make custom layout style
-```objc
-1): Inherit a subclass from BLSmartLayout
+Make custom layout style
 
+1: Inherit a subclass from BLSmartLayout
+
+```objc
 //interface
 @interface CustomSmartLayout : BLSmartLayout 
 
@@ -109,16 +113,21 @@ label.bls_anchorInfo = anchorInfo;
 }
 
 @end
+```
 
-2): Regist layout subclass
+2: Regist layout subclass
 
+```objc
 [UIView bls_registLayoutClass:[CustomSmartLayout class] layoutType:BLSmartLayoutTypeUser + 10];
+```
 
-3): using new layout style
+3: Using new layout style
 
+```objc
 UIView* view = [[UIView alloc] init];
 view.bls_layoutType = BLSmartLayoutTypeAnchor;
 ```
 
 Look through the demo,you will find the way quickly  
+
 
