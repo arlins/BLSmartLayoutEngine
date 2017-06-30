@@ -1,13 +1,14 @@
 ## BLSmartLayoutEngine
 
-BLSmartLayoutEngine is a lightweight layout engine for iOS
+`BLSmartLayoutEngine` is a lightweight layout engine for iOS.
 
 ## About
 
-BLSmartLayoutEngine is a lightweight layout engine for iOS,here are the reasons why we make it:
+`BLSmartLayoutEngine` is a lightweight layout engine for iOS,here are the reasons why we make it:
 
-1:Some layout engines people using now,such as autoresizing, auto-layout,and Masonry,it is complicated. 
-2:BLSmartLayoutEngine is easy to learn and use, unlike auto-layout,it does not depend on any advanced system version,  so you have no need to consider the system versions.
+1: Some layout engines people using now,such as autoresizing, auto-layout,and Masonry,it is complicated. 
+2: BLSmartLayoutEngine is easy to learn and use, unlike auto-layout,it does not depend on any advanced system version,  so you have no need to consider the system versions.
+3: Somewhere we may want to layout UI dynamically.
 
 ## CocoaPods
 
@@ -95,17 +96,15 @@ label.bls_anchorInfo = anchorInfo;
 
 Make custom layout style
 
-1: Inherit a subclass from BLSmartLayout
+1: Implementation a subclass inherit from `BLSmartLayout`
 
 ```objc
-//interface
 @interface CustomSmartLayout : BLSmartLayout 
 
 + (void)bls_layoutViews:(UIView*)superView;
 
 @end
 
-//implementation
 @implementation CustomSmartLayout
 
 + (void)bls_layoutViews:(UIView*)superView {
@@ -115,13 +114,13 @@ Make custom layout style
 @end
 ```
 
-2: Regist layout subclass
+2: Regist subclass
 
 ```objc
 [UIView bls_registLayoutClass:[CustomSmartLayout class] layoutType:BLSmartLayoutTypeUser + 10];
 ```
 
-3: Using new layout style
+3: Using the new layout style
 
 ```objc
 UIView* view = [[UIView alloc] init];
@@ -129,5 +128,3 @@ view.bls_layoutType = BLSmartLayoutTypeAnchor;
 ```
 
 Look through the demo,you will find the way quickly  
-
-
