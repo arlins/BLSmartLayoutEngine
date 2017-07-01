@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "BLSmartLayoutEngine.h"
 #import "ViewController.h"
+#import "BLSmartLayoutCustomLayout.h"
 
 @interface AppDelegate ()
 
@@ -26,6 +27,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [UIView bls_registLayoutClass:[BLSmartLayoutCustomLayout class] layoutType:BLSLAYOUTTYPE_CUSTOM];
     
     ViewController * viewController = [[[ViewController alloc] init] autorelease];
     self.window = [[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds] autorelease];

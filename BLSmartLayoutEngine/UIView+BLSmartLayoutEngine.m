@@ -59,7 +59,7 @@ static NSMutableDictionary* bls_layoutDictionary = nil;
         return Nil;
     }
     
-    Class layoutClass = [bls_layoutDictionary objectForKey:[NSNumber numberWithUnsignedInteger:type]];
+    Class layoutClass = [bls_layoutDictionary objectForKey:@(type)];
     return layoutClass;
 }
 
@@ -127,6 +127,15 @@ static NSMutableDictionary* bls_layoutDictionary = nil;
 + (void)bls_registLayoutClass:(Class)layoutClass layoutType:(NSUInteger)type {
     if ( ![layoutClass isSubclassOfClass:[BLSmartLayout class]] )
     {
+        NSAssert( NO, @"[error]layoutClass must inherit from BLSmartLayout." );
+        return;
+    }
+    
+    Class layoutClassName = [bls_layoutDictionary objectForKey:@(type)];
+    if ( layoutClassName != Nil )
+    {
+        NSString *error = [NSString stringWithFormat:@"[error]layoutClass %@ of type %d alerady exist, use a new type to regist.", NSStringFromClass(layoutClass), (int)type];
+        NSAssert( NO, error );
         return;
     }
     
@@ -158,14 +167,12 @@ static NSMutableDictionary* bls_layoutDictionary = nil;
 
 - (void)bls_common_init
 {
-    self.bls_minimumWidth = 0.0;
-    self.bls_minimumHeight = 0.0;
-    self.bls_maximumWidth = CGFLOAT_MAX;
-    self.bls_maximumHeight = CGFLOAT_MAX;
     self.bls_layoutType = BLSmartLayoutTypeNone;
     self.bls_layoutEnbled = YES;
     self.bls_spacing = 0.0;
     self.bls_itemSpacing = 0.0;
+    self.bls_fixedWidth = -1.0;
+    self.bls_fixedHeight = -1.0;
     self.bls_margins = UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0);
 }
 
@@ -173,11 +180,6 @@ static NSMutableDictionary* bls_layoutDictionary = nil;
 
 - (void)bls_setFrame:(CGRect)frame
 {
-    frame.size.height = MIN(frame.size.height, self.bls_maximumHeight);
-    frame.size.height = MAX(frame.size.height, self.bls_minimumHeight);
-    frame.size.width = MIN(frame.size.width, self.bls_maximumWidth);
-    frame.size.width = MAX(frame.size.width, self.bls_minimumWidth);
-    
     [self bls_setFrame:frame];
     [self bls_layoutSubViews];
 }
@@ -207,91 +209,22 @@ static NSMutableDictionary* bls_layoutDictionary = nil;
 //*
 - (CGFloat)bls_fixedHeight
 {
-    return self.bls_preferredHeight;
+    return [objc_getAssociatedObject(self, @selector(bls_fixedHeight)) floatValue];
 }
 
 - (void)setBls_fixedHeight:(CGFloat)bls_fixedHeight
 {
-    self.bls_maximumHeight = bls_fixedHeight;
-    self.bls_minimumHeight = bls_fixedHeight;
-    self.bls_preferredHeight = bls_fixedHeight;
+    objc_setAssociatedObject(self, @selector(bls_fixedHeight), @(bls_fixedHeight), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (CGFloat)bls_maximumHeight
-{
-    return [objc_getAssociatedObject(self, @selector(bls_maximumHeight)) floatValue];
-}
-
-- (void)setBls_maximumHeight:(CGFloat)bls_maximumHeight
-{
-    objc_setAssociatedObject(self, @selector(bls_maximumHeight), @(bls_maximumHeight), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (CGFloat)bls_minimumHeight
-{
-    return [objc_getAssociatedObject(self, @selector(bls_minimumHeight)) floatValue];
-}
-
-- (void)setBls_minimumHeight:(CGFloat)bls_minimumHeight
-{
-    objc_setAssociatedObject(self, @selector(bls_minimumHeight), @(bls_minimumHeight), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (CGFloat)bls_preferredHeight
-{
-    return self.frame.size.height;
-}
-
-- (void)setBls_preferredHeight:(CGFloat)bls_preferredHeight
-{
-    CGRect frame = self.frame;
-    frame.size.height = bls_preferredHeight;
-    self.frame = frame;
-}
-
-//*
 - (CGFloat)bls_fixedWidth
 {
-    return self.bls_preferredWidth;
+    return [objc_getAssociatedObject(self, @selector(bls_fixedWidth)) floatValue];
 }
 
 - (void)setBls_fixedWidth:(CGFloat)bls_fixedWidth
 {
-    self.bls_maximumWidth = bls_fixedWidth;
-    self.bls_minimumWidth = bls_fixedWidth;
-    self.bls_preferredWidth = bls_fixedWidth;
-}
-
-- (CGFloat)bls_maximumWidth
-{
-    return [objc_getAssociatedObject(self, @selector(bls_maximumWidth)) floatValue];
-}
-
-- (void)setBls_maximumWidth:(CGFloat)bls_maximumWidth
-{
-    objc_setAssociatedObject(self, @selector(bls_maximumWidth), @(bls_maximumWidth), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (CGFloat)bls_minimumWidth
-{
-    return [objc_getAssociatedObject(self, @selector(bls_minimumWidth)) floatValue];
-}
-
-- (void)setBls_minimumWidth:(CGFloat)bls_minimumWidth
-{
-    objc_setAssociatedObject(self, @selector(bls_minimumWidth), @(bls_minimumWidth), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
-
-- (CGFloat)bls_preferredWidth
-{
-    return self.frame.size.width;
-}
-
-- (void)setBls_preferredWidth:(CGFloat)bls_preferredWidth
-{
-    CGRect frame = self.frame;
-    frame.size.width = bls_preferredWidth;
-    self.frame = frame;
+    objc_setAssociatedObject(self, @selector(bls_fixedWidth), @(bls_fixedWidth), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (UIEdgeInsets)bls_margins
@@ -314,6 +247,16 @@ static NSMutableDictionary* bls_layoutDictionary = nil;
 - (void)setBls_anchorInfo:(BLSmartLayoutAnchorInfo *)bls_anchorInfo
 {
     objc_setAssociatedObject(self, @selector(bls_anchorInfo), bls_anchorInfo, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (id)bls_userLayoutInfo
+{
+    return objc_getAssociatedObject(self, @selector(bls_userLayoutInfo));
+}
+
+- (void)setBls_userLayoutInfo:(id)bls_userLayoutInfo
+{
+    objc_setAssociatedObject(self, @selector(bls_userLayoutInfo), bls_userLayoutInfo, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (CGFloat)bls_spacing
@@ -344,10 +287,21 @@ static NSMutableDictionary* bls_layoutDictionary = nil;
     }
     
     Class layoutClass = [UIView layoutClassByType:self.bls_layoutType];
-    if ( layoutClass != Nil && [layoutClass isSubclassOfClass:[BLSmartLayout class]] )
+    if ( layoutClass == Nil )
     {
-        [layoutClass bls_layoutViews:self];
+        NSString *error = [NSString stringWithFormat:@"[error]Can not find layoutClass of type %d, regist layoutClass before you use it.", (int)self.bls_layoutType];
+        NSAssert( NO, error );
+        return;
     }
+    
+    if ( ![layoutClass isSubclassOfClass:[BLSmartLayout class]] )
+    {
+        NSString *error = [NSString stringWithFormat:@"[error]layoutClass %@ is not a subclass of BLSmartLayout.", NSStringFromClass(layoutClass)];
+        NSAssert( NO, error );
+        return;
+    }
+    
+    [layoutClass bls_layoutViews:self];
 }
 
 - (void)bls_viewDidLayoutSubView:(UIView *)view

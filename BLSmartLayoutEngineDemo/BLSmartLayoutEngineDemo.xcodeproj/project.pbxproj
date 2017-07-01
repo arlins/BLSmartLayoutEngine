@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5414F9841F06490200923AE3 /* libBLSmartLayoutEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5414F9821F0648E500923AE3 /* libBLSmartLayoutEngine.a */; };
+		5414F9AC1F07A07100923AE3 /* BLSmartLayoutCustomLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5414F9AB1F07A07100923AE3 /* BLSmartLayoutCustomLayout.m */; };
 		DAFC52391CDC7E7800D2DC80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFC52231CDC7E7800D2DC80 /* AppDelegate.m */; };
 		DAFC523A1CDC7E7800D2DC80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAFC52241CDC7E7800D2DC80 /* Assets.xcassets */; };
 		DAFC52431CDC7E7800D2DC80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAFC52361CDC7E7800D2DC80 /* main.m */; };
@@ -41,6 +42,8 @@
 /* Begin PBXFileReference section */
 		5414F97D1F0648E500923AE3 /* BLSmartLayoutEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BLSmartLayoutEngine.xcodeproj; path = ../BLSmartLayoutEngine.xcodeproj; sourceTree = "<group>"; };
 		5414F9831F0648F500923AE3 /* BLSmartLayoutEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLSmartLayoutEngine.h; path = ../../BLSmartLayoutEngine/BLSmartLayoutEngine.h; sourceTree = "<group>"; };
+		5414F9AA1F07A07100923AE3 /* BLSmartLayoutCustomLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLSmartLayoutCustomLayout.h; sourceTree = "<group>"; };
+		5414F9AB1F07A07100923AE3 /* BLSmartLayoutCustomLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLSmartLayoutCustomLayout.m; sourceTree = "<group>"; };
 		DAFC517D1CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLSmartLayoutEngineDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFC51961CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLSmartLayoutEngineDemo.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFC51A11CDB48FF00D2DC80 /* BLSmartLayoutEngineDemo.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLSmartLayoutEngineDemo.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +120,8 @@
 				DAFC52361CDC7E7800D2DC80 /* main.m */,
 				DAFC52371CDC7E7800D2DC80 /* ViewController.h */,
 				DAFC52381CDC7E7800D2DC80 /* ViewController.m */,
+				5414F9AA1F07A07100923AE3 /* BLSmartLayoutCustomLayout.h */,
+				5414F9AB1F07A07100923AE3 /* BLSmartLayoutCustomLayout.m */,
 			);
 			path = BLSmartLayoutEngineDemo;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 			files = (
 				DAFC52441CDC7E7800D2DC80 /* ViewController.m in Sources */,
 				DAFC52431CDC7E7800D2DC80 /* main.m in Sources */,
+				5414F9AC1F07A07100923AE3 /* BLSmartLayoutCustomLayout.m in Sources */,
 				DAFC52391CDC7E7800D2DC80 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

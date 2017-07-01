@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BLSmartLayoutEngine.h"
+
+#define BLSLAYOUTTYPE_CUSTOM BLSmartLayoutTypeUser + 10
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

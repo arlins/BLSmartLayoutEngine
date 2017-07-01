@@ -35,19 +35,12 @@ extern const NSUInteger BLSmartLayoutTypeUser;      //扩展类型
 @property (nonatomic, assign) BOOL bls_layoutEnbled;        //是否参与布局
 
 @property (nonatomic, assign) CGFloat bls_fixedHeight;      //固定高度
-@property (nonatomic, assign) CGFloat bls_minimumHeight;    //最小高度，暂未实现
-@property (nonatomic, assign) CGFloat bls_maximumHeight;    //最大高度，暂未实现
-@property (nonatomic, assign) CGFloat bls_preferredHeight;  //最合适的高度，受限于最小高度和最大高度
-
 @property (nonatomic, assign) CGFloat bls_fixedWidth;       //固定宽度
-@property (nonatomic, assign) CGFloat bls_minimumWidth;     //最小宽度
-@property (nonatomic, assign) CGFloat bls_maximumWidth;     //最大宽度
-@property (nonatomic, assign) CGFloat bls_preferredWidth;   //最合适的宽度，受限于最小宽度和最大宽度
-
 @property (nonatomic, assign) CGFloat bls_spacing;          //子View之间的间距
 @property (nonatomic, assign) CGFloat bls_itemSpacing;      //距离下兄弟View之间的间距
 @property (nonatomic, assign) UIEdgeInsets bls_margins;     //布局空间四个边距的缩进
 @property (nonatomic, strong) BLSmartLayoutAnchorInfo* bls_anchorInfo;  //Anchor布局锚点信息
+@property (nonatomic, strong) id bls_userLayoutInfo;        //自定义布局类型信息
 
 /**
  *  @brief  注册布局类，需要扩展新的布局时使用使用该方法进行布局类以及类型的注册

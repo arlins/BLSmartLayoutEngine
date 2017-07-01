@@ -123,14 +123,14 @@ Make custom layout style
 2: Regist subclass
 
 ```objc
-[UIView bls_registLayoutClass:[CustomSmartLayout class] layoutType:BLSmartLayoutTypeUser + 10];
+[UIView bls_registLayoutClass:[CustomSmartLayout class] layoutType:BLSmartLayoutTypeUser + 100];
 ```
 
 3: Using the new layout style
 
 ```objc
 UIView* view = [[UIView alloc] init];
-view.bls_layoutType = BLSmartLayoutTypeAnchor;
+view.bls_layoutType = BLSmartLayoutTypeUser + 100;
 ```
 
 Look through the demo,you will find the way quickly.

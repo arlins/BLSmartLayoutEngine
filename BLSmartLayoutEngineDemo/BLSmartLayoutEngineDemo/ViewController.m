@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "BLSmartLayoutEngine.h"
-
+#import "AppDelegate.h"
 
 const CGFloat KViewContrllerSpacing = 20.0;
 
@@ -109,6 +109,8 @@ const CGFloat KViewContrllerSpacing = 20.0;
         UIView *hBoxView = ( i % 2 == 0 ? [self createVBoxItem:i] : [self createHBoxItem:i] );
         [self.contentView addSubview:hBoxView];
     }
+    
+    [self.contentView addSubview:[self createCustomLayoutView]];
 
     [self.view addSubview:self.contentView];
 }
@@ -155,6 +157,22 @@ const CGFloat KViewContrllerSpacing = 20.0;
     {
         UIView* vBoxView = [self createAnchorItem:j];
         [view addSubview:vBoxView];
+    }
+    
+    return view;
+}
+
+- (UIView *)createCustomLayoutView
+{
+    UIView *view = [[[UIView alloc] initWithFrame:CGRectZero] autorelease];
+    view.bls_layoutType = BLSLAYOUTTYPE_CUSTOM;
+    view.backgroundColor = [UIColor randomColor];
+    
+    for ( int j = 1; j < 4; j++ )
+    {
+        UIView* subview = [[[UIView alloc] initWithFrame:CGRectZero] autorelease];
+        subview.backgroundColor = [UIColor randomColor];
+        [view addSubview:subview];
     }
     
     return view;
@@ -234,7 +252,7 @@ const CGFloat KViewContrllerSpacing = 20.0;
     UIView *subView = [self.contentView viewWithTag:1];
     if ( subView )
     {
-        CGFloat bls_fixedWidth = subView.bls_fixedWidth;
+        CGFloat bls_fixedWidth = subView.frame.size.width;
         bls_fixedWidth += 30.0;
         bls_fixedWidth = MAX(0.0, bls_fixedWidth);
         
@@ -253,7 +271,7 @@ const CGFloat KViewContrllerSpacing = 20.0;
     UIView *subView = [self.contentView viewWithTag:1];
     if ( subView )
     {
-        CGFloat bls_fixedWidth = subView.bls_fixedWidth;
+        CGFloat bls_fixedWidth = subView.frame.size.width;
         bls_fixedWidth -= 30.0;
         bls_fixedWidth = MAX(0.0, bls_fixedWidth);
 

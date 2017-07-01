@@ -49,7 +49,7 @@
         }
         
         
-        if ( subView.bls_minimumHeight == subView.bls_maximumHeight )
+        if ( subView.bls_fixedHeight >= 0.0 )
         {
             totalFixedHeight += subView.bls_fixedHeight;
         }
@@ -79,7 +79,7 @@
     for ( int i = 0; i < layoutSubViews.count; i++ )
     {
         UIView* subView = [layoutSubViews objectAtIndex:i];
-        if ( subView.bls_minimumHeight == subView.bls_maximumHeight )
+        if ( subView.bls_fixedHeight >= 0.0 )
         {
             CGRect frame;
             frame.origin.x = leftPosition;
