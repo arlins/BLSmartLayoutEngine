@@ -12,10 +12,15 @@
 
 3: Somewhere we may want to layout UI dynamically.
 
+## Requirements
+
+iOS 7.0 or later
+
 ## CocoaPods
 
-Coming soon...
-
+```objc
+pod 'BLSmartLayoutEngine', ‘1.0.1’
+```
 
 ## Usage
 
@@ -129,4 +134,3 @@ view.bls_layoutType = BLSmartLayoutTypeAnchor;
 ```
 
 Look through the demo,you will find the way quickly.
-Feel free to use it. 
