@@ -19,7 +19,7 @@ iOS 7.0 or later
 ## CocoaPods
 
 ```objc
-pod 'BLSmartLayoutEngine', ‘1.0.1’
+pod 'BLSmartLayoutEngine', ‘1.0.2’
 ```
 
 ## Usage
